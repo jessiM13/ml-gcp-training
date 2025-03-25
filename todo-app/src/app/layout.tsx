@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Todo App - Stay Organized',
+  title: 'Todo App - Stay Organized - Jessi',
   description:
     'A simple and elegant Todo app to help you stay organized and productive.',
 };
