@@ -10,7 +10,7 @@ steps:
     dir: 'todo-app'
     entrypoint: 'npm'
     args: ['run', 'create-env', '.env']
-    secretEnv: ['API_KEY']
+    secretEnv: ['jessikey']
     env:
       - 'NEXT_PUBLIC_API_KEY=$$jessikey'
 
