@@ -10,9 +10,9 @@ steps:
     dir: 'todo-app'
     entrypoint: 'npm'
     args: ['run', 'create-env', '.env']
-    secretEnv: ['jessikey']
+    secretEnv: ['API_KEY']
     env:
-      - 'NEXT_PUBLIC_API_KEY=$$jessikey'
+      - 'NEXT_PUBLIC_API_KEY=$$API_KEY'
 
   # Deploy to App Engine
   - name: 'gcr.io/cloud-builders/gcloud'
@@ -22,8 +22,8 @@ steps:
 # Access secrets from Secret Manager
 availableSecrets:
   secretManager:
-    - versionName: projects/${PROJECT_ID}/secrets/jessikey/versions/latest
-      env: 'jessikey'
+    - versionName: projects/${PROJECT_ID}/secrets/API_KEY/versions/latest
+      env: 'API_KEY'
 
 timeout: '1600s' 
 
