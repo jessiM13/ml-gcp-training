@@ -10,9 +10,9 @@ steps:
     dir: 'todo-app'
     entrypoint: 'npm'
     args: ['run', 'create-env', '.env']
-    secretEnv: ['jessikey']
+    secretEnv: ['API_KEY']
     env:
-      - 'NEXT_PUBLIC_API_KEY=$$jessikey'
+      - 'NEXT_PUBLIC_API_KEY=$$API_KEY'
 
   # Deploy to App Engine
   - name: 'gcr.io/cloud-builders/gcloud'
